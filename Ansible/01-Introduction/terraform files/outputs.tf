@@ -6,7 +6,7 @@ output "ansible_publicip" {
 
 output "rhel_publicip" {
   description = "EC2 Instance Public IP"
-  value = aws_instance.rhel.public_ip
+  value = aws_instance.rhel-host[*].public_ip
 }
 
 # EC2 Instance Public IP
